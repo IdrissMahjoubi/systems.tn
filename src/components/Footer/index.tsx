@@ -2,6 +2,10 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
+import france from "../../../public/img/svg/france.svg";
+import logo from "../../../public/img/svg/logo.svg";
+import uk from "../../../public/img/svg/uk.svg";
+import linkedin from "../../../public/img/svg/linkedin.svg";
 
 import i18n from "i18next";
 import {
@@ -73,7 +77,7 @@ const Footer = ({ t }: any) => {
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
                   <SvgIcon
-                    src="uk.svg"
+                    src={uk}
                     aria-label="homepage"
                     width="30px"
                     height="30px"
@@ -81,7 +85,7 @@ const Footer = ({ t }: any) => {
                 </LanguageSwitch>
                 <LanguageSwitch onClick={() => handleChange("fr")}>
                   <SvgIcon
-                    src="france.svg"
+                    src={france}
                     aria-label="homepage"
                     width="30px"
                     height="30px"
@@ -124,7 +128,7 @@ const Footer = ({ t }: any) => {
             <NavLink to="/">
               <LogoContainer>
                 <SvgIcon
-                  src="logo.svg"
+                  src={logo}
                   aria-label="homepage"
                   width="101px"
                   height="64px"
@@ -133,7 +137,7 @@ const Footer = ({ t }: any) => {
             </NavLink>
             <SocialLink
               href="https://www.linkedin.com/in/lasha-kakabadze/"
-              src="linkedin.svg"
+              src={linkedin}
             />
           </Row>
         </Container>
