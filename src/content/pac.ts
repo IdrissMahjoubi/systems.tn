@@ -13,7 +13,7 @@ export const PAC_DATA: Data = {
           title: "EM ID 125 kHz W26/34 RFID reader + Digicode keypad",
           description:
             "but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          imageSrc: "/img/suprema-bioentry.jpg",
+          imageSrc: "systems.tn/img/suprema-bioentry.jpg",
           downloads: ["link1", "link2"],
           specs: {
             operating_voltage: "12 V DC",
@@ -32,7 +32,7 @@ export const PAC_DATA: Data = {
           title: "SUPREMA BioEntry W2 RFID Fingerprint IP Outdoor Reader",
           description:
             "but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          imageSrc: "/img/suprema-bioentry.jpg",
+          imageSrc: "systems.tn/img/suprema-bioentry.jpg",
           downloads: ["link1", "link2"],
           specs: {
             biometric_sensor_type: "Optical Sensor (OP5)",
@@ -78,7 +78,7 @@ export const PAC_DATA: Data = {
         {
           title: "EM ID 125 kHz W26/34 RFID reader + Digicode keypad",
           description: "This is a descrtiption of the product",
-          imageSrc: "/img/suprema-bioentry.jpg",
+          imageSrc: "systems.tn/img/suprema-bioentry.jpg",
           downloads: ["link1", "link2"],
           specs: {
             operating_voltage: "12 V DC",
@@ -97,7 +97,7 @@ export const PAC_DATA: Data = {
           title: "ASE 4 door controller",
           pending: true,
           description: "COMING SOON",
-          imageSrc: "",
+          imageSrc: "systems.tn",
           downloads: [],
           specs: {},
         },
@@ -111,7 +111,7 @@ export const PAC_DATA: Data = {
           title: "Swing gate H306B",
           description:
             "with full stainless steel housing and special finish, our Q306W could work outdoor directly without any requirement for canopy or shelter. Arylics are used as swing arm and filling parts to make it more visual comfort. Normal and wide lane solution could be provided as per customers requirement for physically challenged people.With above features,Q306W is widely applied in places as conference centre,Office entrance,Amusement Park,Government hall,etc",
-          imageSrc: "/img/suprema-bioentry.jpg",
+          imageSrc: "systems.tn/img/suprema-bioentry.jpg",
           downloads: ["link1", "link2"],
           specs: {
             "Technical Data": "test",
@@ -139,7 +139,7 @@ export const PAC_DATA: Data = {
           title: "NO SOFTWARE AVAILABLE",
           pending: true,
           description: "COMING SOON",
-          imageSrc: "",
+          imageSrc: "systems.tn",
           downloads: [],
           specs: {},
         },
