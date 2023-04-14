@@ -1,8 +1,7 @@
 {
   "name": "ase",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "http://idrissmahjoubi.github.io/systems.tn",
+  "homepage": ".",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^18.0.28",
