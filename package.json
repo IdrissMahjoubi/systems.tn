@@ -1,8 +1,8 @@
 {
+  "homepage": "idrissmahjoubi.github.io/systems.tn",
   "name": "ase",
   "version": "0.1.0",
   "proxy": "http://localhost:3000",
-  "homepage": ".",
   "dependencies": {
     "@types/node": "^15.14.9",
     "@types/react": "^18.0.28",
