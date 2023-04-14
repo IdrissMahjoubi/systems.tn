@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkase=self.webpackChunkase||[]).push([[532],{5532:function(e,n,r){r.r(n);var s=r(2791),u=r(184),t=(0,s.lazy)((function(){return Promise.resolve().then(r.bind(r,2478))}));n.default=function(){return(0,u.jsx)(t,{children:"IT"})}}}]);
-//# sourceMappingURL=532.ed91cbac.chunk.js.map
