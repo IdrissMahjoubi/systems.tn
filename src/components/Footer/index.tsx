@@ -98,9 +98,11 @@ const Footer = ({ t }: any) => {
             <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />
               <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
+              <Para>
+                10 Avenue Habib Bourguiba Immeuble Zéphire, Appart 8 3-1
+              </Para>
+              <Para>2080 Ariana </Para>
+              <Para>Tunis</Para>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />
@@ -136,7 +138,7 @@ const Footer = ({ t }: any) => {
               </LogoContainer>
             </NavLink>
             <SocialLink
-              href="https://www.linkedin.com/in/lasha-kakabadze/"
+              href="https://www.linkedin.com/company/autonomous-system-engineering/"
               src={linkedin}
             />
           </Row>
