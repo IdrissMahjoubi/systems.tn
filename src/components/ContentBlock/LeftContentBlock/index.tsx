@@ -41,7 +41,7 @@ const LeftContentBlock = ({
                     section.map((item: any, id: number) => {
                       return (
                         <Col key={id} span={11}>
-                          <Link to={`solutions/${item.route}`}>
+                          {/* <Link to={`solutions/${item.route}`}> */}
                             <SectionItem>
                               <SvgIcon
                                 src={item.icon}
@@ -51,7 +51,7 @@ const LeftContentBlock = ({
                               <MinTitle>{t(item.title)}</MinTitle>
                               <MinPara>{t(item.content)}</MinPara>
                             </SectionItem>
-                          </Link>
+                          {/* </Link> */}
                         </Col>
                       );
                     })}

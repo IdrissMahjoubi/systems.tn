@@ -2,10 +2,10 @@ import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-import france from "../../../public/img/svg/france.svg";
-import logo from "../../../public/img/svg/logo.svg";
-import uk from "../../../public/img/svg/uk.svg";
-import linkedin from "../../../public/img/svg/linkedin.svg";
+import france from "../../assets/france.svg";
+import logo from "../../assets/logo.svg";
+import uk from "../../assets/uk.svg";
+import linkedin from "../../assets/linkedin.svg";
 
 import i18n from "i18next";
 import {
