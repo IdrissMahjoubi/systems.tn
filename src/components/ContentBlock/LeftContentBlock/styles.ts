@@ -41,7 +41,7 @@ export const SectionItem = styled("div")`
   border: 1px solid #AFEFFF;
   margin: 5px;
   padding: 12px;
-  height: 210px;
+  height: 150px;
 `;
 
 export const MinTitle = styled("h1")`

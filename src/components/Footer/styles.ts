@@ -68,16 +68,22 @@ export const Large = styled(Link)<any>`
 `;
 
 export const Chat = styled("p")`
+  font-size: 16px;
   color: #000b30;
+  display: block;
+  font-family: "Motiva Sans Bold", serif;
   max-width: fit-content;
   border-bottom: 1px solid #000b30;
   cursor: pointer;
-  margin-top: 1rem;
   transition: all 0.3s ease-in-out;
-
   &:hover {
     border-bottom: 1px solid rgb(255, 130, 92);
     color: rgb(255, 130, 92);
+  }
+
+  @media screen and (max-width: 414px) {
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
   }
 `;
 

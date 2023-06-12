@@ -12,7 +12,7 @@ import {
   SectionWrapper,
   SectionItem,
 } from "./styles";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const LeftContentBlock = ({
   icon,

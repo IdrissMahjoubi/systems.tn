@@ -55,12 +55,17 @@ const Footer = ({ t }: any) => {
           <Row justify="space-between">
             <Col lg={6} md={6} sm={12} xs={12}>
               <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
-              <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
-              </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
+              <a href="tel::+216 71 703 733">
+                <Chat>
+                  {" "}
+                  <b>Mobile:</b> +216 71 703 733
+                </Chat>
+              </a>
+              <a href="mailto:contact@systems.tn">
+                <Chat>
+                  {" "}
+                  <b>E-mail:</b> contact@systems.tn
+                </Chat>
               </a>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
