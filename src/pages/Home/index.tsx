@@ -1,45 +1,75 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import { data as UseCasesData } from "../../content/UseCases";
-import AboutContent from "../../content/AboutContent.json";
-import ContactContent from "../../content/ContactContent.json";
 import circuit from "../../assets/circuit.svg";
 import drone from "../../assets/drone.svg";
+import { withTranslation } from "react-i18next";
+import BAC from "../../assets/BAC.svg";
+import PAC from "../../assets/PAC.svg";
+import IT from "../../assets/IT.svg";
+import AERONAUTICS from "../../assets/AERONAUTICS.svg";
 
 const Container = lazy(() => import("../../common/Container"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Contact = lazy(() => import("../../components/Block/ContactForm"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-
-const Home = () => {
+const sections = [
+  {
+    route: "pac",
+    title: "Physical access control",
+    content: "",
+    icon: PAC,
+  },
+  {
+    route: "bac",
+    title: "Border access control",
+    content: "",
+    icon: BAC,
+  },
+  {
+    route: "it",
+    title: "IT solutions",
+    content: "",
+    icon: IT,
+  },
+  {
+    route: "aeronautics",
+    title: "Aeronautics",
+    content: "",
+    icon: AERONAUTICS,
+  },
+];
+const Home = ({ t }: { t: any }) => {
   return (
     <Container>
       <ScrollToTop />
       <ContentBlock
         type="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
+        title={"AUTONOMOUS SYSTEMS ENGINEERING"}
+        content={t("IntroContent")}
+        button={[
+          {
+            title: "Contact",
+          },
+        ]}
         icon={circuit}
         id="intro"
       />
-      <MiddleBlock title={AboutContent.title} content={AboutContent.text} />
+      <MiddleBlock title={t("AboutTitle")} content={t("AboutContent")} />
       <ContentBlock
         type="left"
-        title={UseCasesData.title}
-        content={UseCasesData.text}
-        section={UseCasesData.section}
+        title={t("UseCasesTitle")}
+        content=""
+        section={sections}
         icon={drone}
         id="use-cases"
       />
       <Contact
-        title={ContactContent.title}
-        content={ContactContent.text}
+        title={t("ContactTitle")}
+        content={t("ContactContent")}
         id="contact"
       />
     </Container>
   );
 };
 
-export default Home;
+export default withTranslation()(Home);
