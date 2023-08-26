@@ -20,11 +20,11 @@ export interface Data {
 }
 
 export interface CategoryProps extends Category {
-  handleOpenModal: () => void;
+  handleOpenModal?: () => void;
 }
 
 export interface ProductProps extends Product {
-  handleOpenModal: () => void;
+  handleOpenModal?: () => void;
 }
 
 export interface Page extends Data {}

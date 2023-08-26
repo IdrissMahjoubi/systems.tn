@@ -1,8 +1,7 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styled from "styled-components";
 import { PAC_DATA } from "../../content/pac";
 import { CategoryProps, ProductProps } from "../../types";
-import Modal from "../../components/Modal";
 
 const HeaderContainer = styled.div`
   background-color: #f2f2f2;
@@ -98,8 +97,9 @@ const ProductDescription = styled.div`
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.4s, background-position 0s;
+  top: 50%;
   &:hover,
   &:active,
   &:focus {
@@ -114,20 +114,19 @@ const ProductDescription = styled.div`
   }
   @media only screen and (max-width: 890px) {
     font-size: 12px;
-
   }
 `;
 
-const ModalContent = styled.div`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    color: #000b30;
-  }
-`;
+// const ModalContent = styled.div`
+//   height: 100%;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   h1 {
+//     color: #000b30;
+//   }
+// `;
 
 const Product: FC<ProductProps> = ({
   description,
@@ -136,6 +135,7 @@ const Product: FC<ProductProps> = ({
   pending,
   handleOpenModal,
 }) => {
+  console.log("test", process.env.PUBLIC_URL);
   return (
     <ProductCard>
       {!pending && <ProductImage src={imageSrc} alt={title} />}
@@ -174,14 +174,14 @@ const Categories: FC<CategoryProps> = ({
 
 const Pac = () => {
   const { pageTitle, pageDescription, categories } = PAC_DATA;
-  const [isOpen, toggle] = useState(false);
+  // const [isOpen, toggle] = useState(false);
 
-  const handleOpenModal = () => {
-    toggle(true);
-  };
-  const handleCloseModal = () => {
-    toggle(false);
-  };
+  // const handleOpenModal = () => {
+  //   toggle(true);
+  // };
+  // const handleCloseModal = () => {
+  //   toggle(false);
+  // };
   return (
     <>
       <HeaderContainer>
@@ -189,16 +189,16 @@ const Pac = () => {
         <PageDescription>{pageDescription}</PageDescription>
       </HeaderContainer>
       <PageContainer>
-        <Modal isOpen={isOpen} handleClose={handleCloseModal}>
+        {/* <Modal isOpen={isOpen} handleClose={handleCloseModal}>
           <ModalContent>
             <h1> Awesome modal </h1>
           </ModalContent>
-        </Modal>
+        </Modal> */}
         {categories.map((category, index) => (
           <Categories
             key={index}
             {...category}
-            handleOpenModal={handleOpenModal}
+            // handleOpenModal={handleOpenModal}
           />
         ))}
       </PageContainer>
