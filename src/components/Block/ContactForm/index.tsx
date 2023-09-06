@@ -38,7 +38,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               <Col span={24}>
                 <Input
                   type="text"
-                  name="name"
+                  name={"Name"}
                   placeholder="Your Name"
                   value={values.name || ""}
                   onChange={handleChange}

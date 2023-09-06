@@ -8,7 +8,7 @@ const Input = ({ name, placeholder, onChange, t }: InputProps) => (
     <Label htmlFor={name}>{t(name)}</Label>
     <StyledInput
       placeholder={t(placeholder)}
-      name={name}
+      name={t(name)}
       id={name}
       onChange={onChange}
     />

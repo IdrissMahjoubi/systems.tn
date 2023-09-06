@@ -29,16 +29,16 @@ export const SectionWrapper = styled("div")`
 `;
 
 export const SectionItem = styled("div")`
-  background: linear-gradient(#FFF2F2 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+  background: linear-gradient(#fff2f2 0 0) var(--p, 0) / var(--p, 0) no-repeat;
   transition: 0.4s, background-position 0s;
   &:hover,
   &:active,
   &:focus {
-    color: #FFF2F2;
+    color: #fff2f2;
     --p: 100%;
     cursor: pointer;
   }
-  border: 1px solid #AFEFFF;
+  border: 1px solid #afefff;
   margin: 5px;
   padding: 12px;
   height: 150px;
