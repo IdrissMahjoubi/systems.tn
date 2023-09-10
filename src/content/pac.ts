@@ -3,8 +3,7 @@ import RFID from "../assets/images/RFID-lock.jpeg";
 
 export const PAC_DATA: Data = {
   pageTitle: "PHYSICAL ACCESS CONTROL",
-  pageDescription:
-    "Physical access control refers to the measures and techniques used to restrict and control access to physical spaces or resources, such as buildings, rooms, equipment, or information systems. Physical access control systems can involve a variety of tools and technologies, including locks, keys, cards, biometric sensors, and security cameras.",
+  pageDescription: `At ASE, we are your trusted partner in delivering top-tier solutions for Physical Access Control Systems. With a steadfast commitment to excellence, we present a diverse range of turnstiles, readers, and equipment designed to meet the unique needs of our valued clients. \n Discover the ideal access control solution tailored to your specific application needs:`,
   categories: [
     {
       productCategory: "Readers",

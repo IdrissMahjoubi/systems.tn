@@ -17,10 +17,12 @@ const PageContainer = styled.div`
 const PageTitle = styled.h1`
   font-size: 36px;
   margin-bottom: 10px;
+  text-align: center;
 `;
 
 const PageDescription = styled.p`
   font-size: 20px;
+  text-align: center;
 `;
 
 const BlockContainer = styled.div`
@@ -182,11 +184,14 @@ const Pac = () => {
   // const handleCloseModal = () => {
   //   toggle(false);
   // };
+  const paragraphs = pageDescription.split('\n').map((line, index) => (
+    <p key={index}>{line}</p>
+  ));
   return (
     <>
       <HeaderContainer>
         <PageTitle>{pageTitle}</PageTitle>
-        <PageDescription>{pageDescription}</PageDescription>
+        <PageDescription>{paragraphs}</PageDescription>
       </HeaderContainer>
       <PageContainer>
         {/* <Modal isOpen={isOpen} handleClose={handleCloseModal}>

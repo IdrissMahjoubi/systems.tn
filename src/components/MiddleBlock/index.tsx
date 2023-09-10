@@ -18,6 +18,11 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
       behavior: "smooth",
     });
   };
+
+  const paragraphs = t(content)
+    .split("\n")
+    .map((line: any, index: any) => <p key={index}>{line}</p>);
+
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
@@ -25,7 +30,7 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
           <Col lg={24} md={24} sm={24} xs={24}>
             <ContentWrapper>
               <h1>{t(title)}</h1>
-              <Content>{t(content)}</Content>
+              <Content>{paragraphs}</Content>
               {button && (
                 <Button name="submit" onClick={() => scrollTo("contact")}>
                   {t(button)}

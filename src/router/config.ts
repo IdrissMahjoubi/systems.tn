@@ -12,7 +12,7 @@ const routes = [
   {
     path: ["/solutions/pac"],
     exact: true,
-    component: "Home",
+    component: "PAC",
   },
   {
     path: ["/solutions/aeronautics"],
