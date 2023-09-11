@@ -3,34 +3,34 @@ import styled from "styled-components";
 import { PAC_DATA } from "../../content/pac";
 import { CategoryProps, ProductProps } from "../../types";
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   background-color: #f2f2f2;
   padding: 20px;
 `;
 
-const PageContainer = styled.div`
+export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 `;
-const PageTitle = styled.h1`
+export const PageTitle = styled.h1`
   font-size: 36px;
   margin-bottom: 10px;
   text-align: center;
 `;
 
-const PageDescription = styled.p`
+export const PageDescription = styled.p`
   font-size: 20px;
   text-align: center;
 `;
 
-const BlockContainer = styled.div`
+export const BlockContainer = styled.div`
   margin: 20px;
   width: 90%;
 `;
 
-const Block = styled.div`
+export const Block = styled.div`
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
@@ -39,17 +39,17 @@ const Block = styled.div`
   padding: 20px;
 `;
 
-const BlockTitle = styled.h2`
+export const BlockTitle = styled.h2`
   font-size: 34px;
   margin-bottom: 10px;
 `;
 
-const BlockDescription = styled.p`
+export const BlockDescription = styled.p`
   font-size: 18px;
   text-align: center;
 `;
 
-const ProductsGrid = styled.div`
+export const ProductsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
@@ -64,7 +64,7 @@ const ProductsGrid = styled.div`
   }
 `;
 
-const ProductCard = styled.div`
+export const ProductCard = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #fff;
@@ -78,13 +78,13 @@ const ProductCard = styled.div`
   }
 `;
 
-const ProductImage = styled.img`
+export const ProductImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
-const ProductTitle = styled.h6`
+export const ProductTitle = styled.h6`
   margin: 0;
   font-size: 24px;
   @media only screen and (max-width: 890px) {
@@ -92,7 +92,7 @@ const ProductTitle = styled.h6`
   }
 `;
 
-const ProductDescription = styled.div`
+export const ProductDescription = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
@@ -133,7 +133,7 @@ const ProductDescription = styled.div`
 //   }
 // `;
 
-const Product: FC<ProductProps> = ({
+export const Product: FC<ProductProps> = ({
   description,
   imageSrc,
   title,
@@ -151,8 +151,7 @@ const Product: FC<ProductProps> = ({
   );
 };
 
-const Categories: FC<CategoryProps> = ({
-  productCategory,
+export const Categories: FC<CategoryProps> = ({
   productCategoryDescription,
   products,
   handleOpenModal,

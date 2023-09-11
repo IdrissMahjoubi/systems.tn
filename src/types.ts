@@ -15,6 +15,7 @@ export interface Product {
 
 export interface Data {
   pageTitle: string;
+  endDescription?: string;
   pageDescription: string;
   categories: Category[];
 }

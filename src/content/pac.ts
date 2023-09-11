@@ -12,8 +12,7 @@ export const PAC_DATA: Data = {
   categories: [
     {
       productCategory: "EMPTY",
-      productCategoryDescription:
-        "At ASE, we are your trusted partner in delivering top-tier solutions for Physical Access Control Systems. With a steadfast commitment to excellence, we present a diverse range of turnstiles, readers, and equipment designed to meet the unique needs of our valued clients.\nDiscover the ideal access control solution tailored to your specific application needs: Our Comprehensive Solutions:",
+      productCategoryDescription: "Our Comprehensive Solutions:",
       products: [
         {
           title: "Access Control Solutions for Office Buildings",
