@@ -16,6 +16,7 @@ import {
   Span,
 } from "./styles";
 import logo from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -38,12 +39,16 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <CustomNavLinkSmall>
-          <Span>{t("Solutions")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall>
-          <Span>{t("Support and Services")}</Span>
-        </CustomNavLinkSmall>
+        <Link to="/">
+          <CustomNavLinkSmall>
+            <Span>{t("Solutions")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
+        <Link to="/">
+          <CustomNavLinkSmall>
+            <Span>{t("Support and Services")}</Span>
+          </CustomNavLinkSmall>
+        </Link>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}

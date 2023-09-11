@@ -9,7 +9,7 @@ export interface Product {
   title: string;
   description: string;
   imageSrc: string;
-  specs: Record<string, any>;
+  specs?: Record<string, any>;
   downloads: string[];
 }
 

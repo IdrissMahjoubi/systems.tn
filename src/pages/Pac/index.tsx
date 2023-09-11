@@ -45,12 +45,13 @@ const BlockTitle = styled.h2`
 `;
 
 const BlockDescription = styled.p`
-  font-size: 22px;
+  font-size: 18px;
+  text-align: center;
 `;
 
 const ProductsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -71,7 +72,6 @@ const ProductCard = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   height: 500px;
-  width: 500px;
   @media only screen and (max-width: 890px) {
     height: 300px;
     width: 300px;
@@ -86,6 +86,7 @@ const ProductImage = styled.img`
 
 const ProductTitle = styled.h6`
   margin: 0;
+  font-size: 24px;
   @media only screen and (max-width: 890px) {
     font-size: 22px;
   }
@@ -96,6 +97,7 @@ const ProductDescription = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  top: 0;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
@@ -109,7 +111,8 @@ const ProductDescription = styled.div`
     background-color: #000b30;
     --p: 100%;
     cursor: pointer;
-    transform: translateY(-10px);
+    transform: translateY(-120px);
+    height: 100%;
     ${ProductTitle} {
       color: #fff2f2;
     }
@@ -137,7 +140,6 @@ const Product: FC<ProductProps> = ({
   pending,
   handleOpenModal,
 }) => {
-  console.log("test", process.env.PUBLIC_URL);
   return (
     <ProductCard>
       {!pending && <ProductImage src={imageSrc} alt={title} />}
@@ -155,11 +157,14 @@ const Categories: FC<CategoryProps> = ({
   products,
   handleOpenModal,
 }) => {
+  const paragraphs = productCategoryDescription
+    .split("\n")
+    .map((line: any, index: any) => <p key={index}>{line}</p>);
   return (
     <BlockContainer>
       <Block>
-        <BlockTitle>{productCategory}</BlockTitle>
-        <BlockDescription>{productCategoryDescription}</BlockDescription>
+        {/* <BlockTitle>{productCategory}</BlockTitle> */}
+        <BlockDescription>{paragraphs}</BlockDescription>
         <ProductsGrid>
           {products.map((product, index) => (
             <Product
@@ -184,9 +189,9 @@ const Pac = () => {
   // const handleCloseModal = () => {
   //   toggle(false);
   // };
-  const paragraphs = pageDescription.split('\n').map((line, index) => (
-    <p key={index}>{line}</p>
-  ));
+  const paragraphs = pageDescription
+    .split("\n")
+    .map((line, index) => <p key={index}>{line}</p>);
   return (
     <>
       <HeaderContainer>
