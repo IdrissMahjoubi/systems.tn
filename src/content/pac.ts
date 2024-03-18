@@ -1,7 +1,7 @@
 import { Data } from "../types";
 import P1 from "../assets/PACS/Biometric access control.jpg";
 import P2 from "../assets/PACS/CBD office building.jpg";
-import P3 from "../assets/PACS/Campus access control.jpg";
+import P3 from "../assets/PACS/Campus acces control.jpg";
 import P4 from "../assets/PACS/Parking lot entry.jpg";
 import P5 from "../assets/PACS/Subway Station turnstile.jpg";
 import P6 from "../assets/PACS/amusement park.jpg";

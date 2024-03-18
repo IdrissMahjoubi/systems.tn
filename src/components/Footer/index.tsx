@@ -74,7 +74,7 @@ const Footer = ({ t }: any) => {
                 {t("Solutions")}
               </Large>
               <Large left="true" to="/">
-                {t("Support and Services")}
+                {t("About us")}
               </Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
@@ -108,16 +108,6 @@ const Footer = ({ t }: any) => {
               </Para>
               <Para>2080 Ariana </Para>
               <Para>Tunis</Para>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Empty />
-              <Title>{t("Policy")}</Title>
-              <Large to="/" left="true">
-                {t("Application Security")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Software Principles")}
-              </Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />

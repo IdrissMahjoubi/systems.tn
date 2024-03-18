@@ -1,7 +1,10 @@
-import { FC } from "react";
+import { FC, lazy } from "react";
 import styled from "styled-components";
 import { PAC_DATA } from "../../content/pac";
 import { CategoryProps, ProductProps } from "../../types";
+import { withTranslation } from "react-i18next";
+import Container from "../../common/Container";
+const Contact = lazy(() => import("../../components/Block/ContactForm"));
 
 export const HeaderContainer = styled.div`
   background-color: #f2f2f2;
@@ -79,8 +82,8 @@ export const ProductCard = styled.div`
 `;
 
 export const ProductImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
 `;
 
@@ -157,7 +160,7 @@ export const Categories: FC<CategoryProps> = ({
   handleOpenModal,
 }) => {
   const paragraphs = productCategoryDescription
-    .split("\n")
+    ?.split("\n")
     .map((line: any, index: any) => <p key={index}>{line}</p>);
   return (
     <BlockContainer>
@@ -178,7 +181,7 @@ export const Categories: FC<CategoryProps> = ({
   );
 };
 
-const Pac = () => {
+const Pac = ({ t }: { t: any }) => {
   const { pageTitle, pageDescription, categories } = PAC_DATA;
   // const [isOpen, toggle] = useState(false);
 
@@ -192,7 +195,7 @@ const Pac = () => {
     .split("\n")
     .map((line, index) => <p key={index}>{line}</p>);
   return (
-    <>
+    <Container>
       <HeaderContainer>
         <PageTitle>{pageTitle}</PageTitle>
         <PageDescription>{paragraphs}</PageDescription>
@@ -211,8 +214,13 @@ const Pac = () => {
           />
         ))}
       </PageContainer>
-    </>
+      <Contact
+        title={t("ContactTitle")}
+        content={t("ContactContent")}
+        id="contact"
+      />
+    </Container>
   );
 };
 
-export default Pac;
+export default withTranslation()(Pac);

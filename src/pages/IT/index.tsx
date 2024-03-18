@@ -7,8 +7,11 @@ import {
   PageTitle,
 } from "../PAC";
 import { IT_DATA } from "../../content/IT";
+import { withTranslation } from "react-i18next";
+import Container from "../../common/Container";
+const Contact = lazy(() => import("../../components/Block/ContactForm"));
 
-const IT = () => {
+const IT = ({ t }: { t: any }) => {
   const { pageTitle, pageDescription, categories } = IT_DATA;
   // const [isOpen, toggle] = useState(false);
 
@@ -22,7 +25,7 @@ const IT = () => {
     .split("\n")
     .map((line, index) => <p key={index}>{line}</p>);
   return (
-    <>
+    <Container>
       <HeaderContainer>
         <PageTitle>{pageTitle}</PageTitle>
         <PageDescription>{paragraphs}</PageDescription>
@@ -41,8 +44,13 @@ const IT = () => {
           />
         ))}
       </PageContainer>
-    </>
+      <Contact
+        title={t("ContactTitle")}
+        content={t("ContactContent")}
+        id="contact"
+      />
+    </Container>
   );
 };
 
-export default IT;
+export default withTranslation()(IT);

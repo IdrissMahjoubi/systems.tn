@@ -2,11 +2,6 @@ import styled from "styled-components";
 
 export const LeftContentSection = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
-
-  @media only screen and (max-width: 1024px) {
-    padding: 4rem 0 4rem;
-  }
 `;
 
 export const Content = styled("p")`
@@ -15,10 +10,7 @@ export const Content = styled("p")`
 
 export const ContentWrapper = styled("div")`
   position: relative;
-
-  @media only screen and (max-width: 575px) {
-    padding-top: 4rem;
-  }
+  padding: 10rem 60px;
 `;
 
 export const SectionWrapper = styled("div")`
@@ -28,12 +20,12 @@ export const SectionWrapper = styled("div")`
 `;
 
 export const SectionItem = styled("div")`
-  background: linear-gradient(#faf9f6 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+  background: linear-gradient(#fff2f2 0 0) var(--p, 0) / var(--p, 0) no-repeat;
   transition: 0.4s, background-position 0s;
   &:hover,
   &:active,
   &:focus {
-    color: #faf9f6;
+    color: #fff2f2;
     --p: 100%;
     cursor: pointer;
   }

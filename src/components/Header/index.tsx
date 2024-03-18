@@ -39,23 +39,28 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <Link to="/">
+        <CustomNavLinkSmall onClick={() => scrollTo("solutions")}>
+          <Span>{t("Solutions")}</Span>
+        </CustomNavLinkSmall>
+        <Link to="/about">
           <CustomNavLinkSmall>
-            <Span>{t("Solutions")}</Span>
-          </CustomNavLinkSmall>
-        </Link>
-        <Link to="/">
-          <CustomNavLinkSmall>
-            <Span>{t("Support and Services")}</Span>
+            <Span>{t("About us")}</Span>
           </CustomNavLinkSmall>
         </Link>
         <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+          onClick={() => {
+            const currentPage = window.location.pathname;
+            const homepage = "/";
+            const targetId = "contact";
+
+            if (currentPage === homepage) {
+              scrollTo(targetId);
+            } else {
+              window.location.href = homepage;
+            }
+          }}
         >
-          <Span>
-            <Button>{t("Contact")}</Button>
-          </Span>
+          <Span>{t("Contact")}</Span>
         </CustomNavLinkSmall>
       </>
     );

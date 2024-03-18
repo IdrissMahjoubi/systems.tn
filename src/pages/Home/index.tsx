@@ -9,7 +9,6 @@ import AERONAUTICS from "../../assets/AERONAUTICS.svg";
 
 const Container = lazy(() => import("../../common/Container"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Contact = lazy(() => import("../../components/Block/ContactForm"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const sections = [
@@ -54,14 +53,13 @@ const Home = ({ t }: { t: any }) => {
         icon={circuit}
         id="intro"
       />
-      <MiddleBlock title={t("AboutTitle")} content={t("AboutContent")} />
       <ContentBlock
         type="left"
-        title={t("UseCasesTitle")}
+        title={t("Solutions")}
         content=""
         section={sections}
         icon={drone}
-        id="use-cases"
+        id="solutions"
       />
       <Contact
         title={t("ContactTitle")}

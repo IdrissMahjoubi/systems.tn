@@ -10,6 +10,10 @@ import {
 } from "../PAC";
 import { DRONE_DATA } from "../../content/DRONE";
 import styled from "styled-components";
+import { withTranslation } from "react-i18next";
+import { lazy } from "react";
+import Container from "../../common/Container";
+const Contact = lazy(() => import("../../components/Block/ContactForm"));
 
 export const ProductsGrid = styled.div`
   display: grid;
@@ -25,7 +29,7 @@ export const ProductsGrid = styled.div`
     grid-template-columns: auto;
   }
 `;
-const Aeronautics = () => {
+const Aeronautics = ({ t }: { t: any }) => {
   const { pageTitle, pageDescription, categories } = DRONE_DATA;
   // const [isOpen, toggle] = useState(false);
 
@@ -39,7 +43,7 @@ const Aeronautics = () => {
     .split("\n")
     .map((line, index) => <p key={index}>{line}</p>);
   return (
-    <>
+    <Container>
       <HeaderContainer>
         <PageTitle>{pageTitle}</PageTitle>
         <PageDescription>{paragraphs}</PageDescription>
@@ -64,8 +68,13 @@ const Aeronautics = () => {
           </Block>{" "}
         </BlockContainer>
       </PageContainer>
-    </>
+      <Contact
+        title={t("ContactTitle")}
+        content={t("ContactContent")}
+        id="contact"
+      />
+    </Container>
   );
 };
 
-export default Aeronautics;
+export default withTranslation()(Aeronautics);

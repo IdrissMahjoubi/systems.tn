@@ -1,6 +1,6 @@
 import { Data } from "../types";
 import Air from "../assets/Drones/Air Scorpion/rendu-final-2.jpg";
-import LIMOSA from "../assets/Drones/LIMOSA/drone final.38(2).jpg";
+import LIMOSA from "../assets/Drones/LIMOSA/drone.3-1.png";
 
 export const DRONE_DATA: Data = {
   pageTitle: "Cutting-Edge Security Drone Solutions",

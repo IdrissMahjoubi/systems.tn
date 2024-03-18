@@ -1,16 +1,16 @@
 export interface Category {
-  productCategory: string;
-  productCategoryDescription: string;
+  productCategory?: string;
+  productCategoryDescription?: string;
   products: Product[];
 }
 
 export interface Product {
   pending?: boolean;
-  title: string;
+  title?: string;
   description: string;
   imageSrc: string;
   specs?: Record<string, any>;
-  downloads: string[];
+  downloads?: string[];
 }
 
 export interface Data {
